@@ -6,6 +6,7 @@ Release:	1
 Group:		Libraries
 License:	LGPL
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.5/%{name}-%{version}.tar.bz2
+# Source0-md5: 193cde48ed7ceaf346bd65590acc101c
 URL:		http://www.gnome.org/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
