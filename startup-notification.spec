@@ -2,7 +2,7 @@ Summary:	Startup Notification Library
 Summary(pl):	Biblioteka Startup Notification
 Name:		startup-notification
 Version:	0.5
-Release:	1
+Release:	2
 Group:		Libraries
 License:	LGPL
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.5/%{name}-%{version}.tar.bz2
