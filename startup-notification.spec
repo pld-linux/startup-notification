@@ -1,22 +1,32 @@
-Summary:	startup-notification
+Summary:	Startup Notification Library
 Name:		startup-notification
 Version:	0.4
-Release:	0.9
+Release:	1
 Group:		Libraries
 License:	LGPL
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.4/%{name}-%{version}.tar.bz2
 URL:		http://www.gnome.org/
+BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-startup-notification
+Startup Notification Library.
 
 %package devel
-Summary:	Header files for startup-notification
-Group:		Libraries
+Summary:	Startup Notification Library development files
+Group:		Development/Libraries
+Requires:	%{name} = %{version}
 
 %description devel
-Header files for startup-notification
+Startup Notification Library development files.
+
+%package static
+Summary:	Static Startup Notification Library library
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}
+
+%description static
+Static Startup Notification Library library.
 
 %prep
 %setup -q
@@ -38,10 +48,15 @@ rm -rf $RPM_BUILD_ROOT
 %files 
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog
-%{_libdir}/*.so*
+%attr(755,root,root) %{_libdir}/*.so.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
 %{_includedir}/*
 %{_pkgconfigdir}/*
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/*.a
