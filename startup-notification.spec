@@ -1,20 +1,17 @@
-#
-# Conditional build:
-%bcond_with	xlibs	# with xlibs instead of XFree86-devel
-#
 Summary:	Startup Notification Library
 Summary(pl):	Biblioteka Startup Notification
 Name:		startup-notification
 Version:	0.8
-Release:	3
+Release:	4
 Group:		Libraries
 License:	LGPL
 Source0:	http://ftp.gnome.org/pub/gnome/sources/startup-notification/0.8/%{name}-%{version}.tar.bz2
 # Source0-md5:	d9b2e9fba18843314ae42334ceb4336d
 URL:		http://www.gnome.org/
-BuildRequires:	%{?with_xlibs:libX11-devel}%{!?with_xlibs:XFree86-devel}
 BuildRequires:	automake >= 1.7
 BuildRequires:	rpmbuild(macros) >= 1.197
+BuildRequires:	xorg-lib-libSM-devel
+BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +29,8 @@ Summary:	Startup Notification Library development files
 Summary(pl):	Pliki programistyczne biblioteki Startup Notification
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	%{?with_xlibs:libX11-devel}%{!?with_xlibs:XFree86-devel}
+Requires:	xorg-lib-libSM-devel
+Requires:	xorg-lib-libX11-devel
 
 %description devel
 Startup Notification Library development files.
