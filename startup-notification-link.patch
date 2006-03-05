@@ -1,0 +1,11 @@
+--- startup-notification-0.8/configure.in.orig	2004-11-10 11:23:49.000000000 +0100
++++ startup-notification-0.8/configure.in	2006-03-05 20:49:24.304739000 +0100
+@@ -79,7 +79,7 @@
+ AC_CHECK_HEADERS(execinfo.h, [AC_CHECK_FUNCS(backtrace)])
+ 
+ LIBSN_CFLAGS=$X_CFLAGS
+-LIBSN_LIBS=" $X_LIBS $X_PRE_LIBS -lX11 $X_EXTRA_LIBS"
++LIBSN_LIBS=" $X_LIBS -lX11 $X_EXTRA_LIBS"
+ AC_SUBST(LIBSN_CFLAGS)
+ AC_SUBST(LIBSN_LIBS)
+ 
