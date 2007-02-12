@@ -1,5 +1,5 @@
 Summary:	Startup Notification Library
-Summary(pl):	Biblioteka Startup Notification
+Summary(pl.UTF-8):   Biblioteka Startup Notification
 Name:		startup-notification
 Version:	0.8
 Release:	5
@@ -21,14 +21,14 @@ Startup Notification Library implements a mechanism allowing a
 desktop environment to track application startup, to provide user
 feedback and other features.
 
-%description -l pl
-Biblioteka Startup Notification jest implementacj± mechanizmu
-pozwalaj±cego ¶rodowisku graficznemu na ¶ledzenie uruchamiania
-aplikacji, dostarczanie odpowiedzi u¿ytkownika oraz inne rzeczy.
+%description -l pl.UTF-8
+Biblioteka Startup Notification jest implementacjÄ… mechanizmu
+pozwalajÄ…cego Å›rodowisku graficznemu na Å›ledzenie uruchamiania
+aplikacji, dostarczanie odpowiedzi uÅ¼ytkownika oraz inne rzeczy.
 
 %package devel
 Summary:	Startup Notification Library development files
-Summary(pl):	Pliki programistyczne biblioteki Startup Notification
+Summary(pl.UTF-8):   Pliki programistyczne biblioteki Startup Notification
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -36,19 +36,19 @@ Requires:	xorg-lib-libX11-devel
 %description devel
 Startup Notification Library development files.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki programistyczne biblioteki Startup Notification.
 
 %package static
 Summary:	Static Startup Notification Library library
-Summary(pl):	Statyczna biblioteka Startup Notification
+Summary(pl.UTF-8):   Statyczna biblioteka Startup Notification
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Startup Notification Library library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka Startup Notification.
 
 %prep
