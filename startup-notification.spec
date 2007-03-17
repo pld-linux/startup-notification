@@ -5,7 +5,7 @@ Version:	0.9
 Release:	1
 Group:		Libraries
 License:	LGPL
-Source0:	http://ftp.gnome.org/pub/gnome/sources/startup-notification/0.8/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/sources/startup-notification/0.9/%{name}-%{version}.tar.bz2
 # Source0-md5:	624b42f1fac5a12c543a079e2cd3b366
 Patch0:		%{name}-link.patch
 URL:		http://www.gnome.org/
