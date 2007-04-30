@@ -1,19 +1,17 @@
-#
-# Conditional build:
-%bcond_with	xlibs	# with xlibs instead of XFree86-devel
-#
 Summary:	Startup Notification Library
 Summary(pl):	Biblioteka Startup Notification
 Name:		startup-notification
-Version:	0.8
-Release:	2
+Version:	0.9
+Release:	1
 Group:		Libraries
 License:	LGPL
-Source0:	http://ftp.gnome.org/pub/gnome/sources/startup-notification/0.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	d9b2e9fba18843314ae42334ceb4336d
+Source0:	http://ftp.gnome.org/pub/gnome/sources/startup-notification/0.9/%{name}-%{version}.tar.bz2
+# Source0-md5:	624b42f1fac5a12c543a079e2cd3b366
 URL:		http://www.gnome.org/
-BuildRequires:	%{?with_xlibs:libX11-devel}%{!?with_xlibs:XFree86-devel}
-BuildRequires:	automake >= 1.7
+BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake >= 1:1.7
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +29,7 @@ Summary:	Startup Notification Library development files
 Summary(pl):	Pliki programistyczne biblioteki Startup Notification
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	%{?with_xlibs:libX11-devel}%{!?with_xlibs:XFree86-devel}
+Requires:	XFree86-devel
 
 %description devel
 Startup Notification Library development files.
@@ -55,7 +53,11 @@ Statyczna biblioteka Startup Notification.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub .
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make}
 
