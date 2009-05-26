@@ -1,19 +1,21 @@
 Summary:	Startup Notification Library
 Summary(pl.UTF-8):	Biblioteka Startup Notification
 Name:		startup-notification
-Version:	0.9
-Release:	3
+Version:	0.10
+Release:	1
 Group:		X11/Libraries
 # most of the code is on MIT license, only sn-util.c contains LGPL-licensed GLib code
 License:	LGPL v2+
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/startup-notification/0.9/%{name}-%{version}.tar.bz2
-# Source0-md5:	624b42f1fac5a12c543a079e2cd3b366
+Source0:	http://freedesktop.org/software/startup-notification/releases/startup-notification-0.10.tar.gz
+# Source0-md5:	bca0ed1c74bc4e483ea2ed12a5717354
 Patch0:		%{name}-link.patch
-URL:		http://www.gnome.org/
+URL:		http://startup-notification.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	libtool
+BuildRequires:	libxcb-devel
 BuildRequires:	rpmbuild(macros) >= 1.197
+BuildRequires:	xcb-util-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -81,6 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{_libdir}/libstartup-notification-1.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libstartup-notification-1.so.0
 
 %files devel
 %defattr(644,root,root,755)
