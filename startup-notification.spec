@@ -15,7 +15,7 @@ BuildRequires:	automake >= 1:1.7
 BuildRequires:	libtool
 BuildRequires:	libxcb-devel
 BuildRequires:	rpmbuild(macros) >= 1.197
-BuildRequires:	xcb-util-devel
+BuildRequires:	xcb-util-devel >= 0.3.1
 BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
