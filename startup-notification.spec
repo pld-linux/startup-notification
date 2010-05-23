@@ -14,6 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	libtool
 BuildRequires:	libxcb-devel
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.197
 BuildRequires:	xcb-util-devel >= 0.3.1
 BuildRequires:	xorg-lib-libX11-devel
@@ -34,6 +35,7 @@ Summary:	Startup Notification Library development files
 Summary(pl.UTF-8):	Pliki programistyczne biblioteki Startup Notification
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xcb-util-devel >= 0.3.1
 Requires:	xorg-lib-libX11-devel
 
 %description devel
