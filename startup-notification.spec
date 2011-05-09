@@ -1,22 +1,21 @@
 Summary:	Startup Notification Library
 Summary(pl.UTF-8):	Biblioteka Startup Notification
 Name:		startup-notification
-Version:	0.10
-Release:	2
+Version:	0.11
+Release:	1
 Group:		X11/Libraries
 # most of the code is on MIT license, only sn-util.c contains LGPL-licensed GLib code
 License:	LGPL v2+
-Source0:	http://freedesktop.org/software/startup-notification/releases/startup-notification-0.10.tar.gz
-# Source0-md5:	bca0ed1c74bc4e483ea2ed12a5717354
-Patch0:		%{name}-link.patch
+Source0:	http://freedesktop.org/software/startup-notification/releases/%{name}-%{version}.tar.gz
+# Source0-md5:	375167f8b1f44689a238526343bd74f0
 URL:		http://startup-notification.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	libtool
-BuildRequires:	libxcb-devel
+BuildRequires:	libxcb-devel >= 1.6
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.197
-BuildRequires:	xcb-util-devel >= 0.3.1
+BuildRequires:	xcb-util-devel >= 0.3.8
 BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,7 +34,8 @@ Summary:	Startup Notification Library development files
 Summary(pl.UTF-8):	Pliki programistyczne biblioteki Startup Notification
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xcb-util-devel >= 0.3.1
+Requires:	libxcb-devel >= 1.6
+Requires:	xcb-util-devel >= 0.3.8
 Requires:	xorg-lib-libX11-devel
 
 %description devel
@@ -58,7 +58,6 @@ Statyczna biblioteka Startup Notification.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
