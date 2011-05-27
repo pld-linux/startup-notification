@@ -1,0 +1,3 @@
+- updated to 0.11
+- removed obsolete link patch
+- use joint xcb-util library (>= 0.3.8)
