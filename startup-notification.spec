@@ -1,13 +1,13 @@
 Summary:	Startup Notification Library
 Summary(pl.UTF-8):	Biblioteka Startup Notification
 Name:		startup-notification
-Version:	0.11
+Version:	0.12
 Release:	1
 Group:		X11/Libraries
 # most of the code is on MIT license, only sn-util.c contains LGPL-licensed GLib code
 License:	LGPL v2+
 Source0:	http://freedesktop.org/software/startup-notification/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	375167f8b1f44689a238526343bd74f0
+# Source0-md5:	2cd77326d4dcaed9a5a23a1232fb38e9
 URL:		http://startup-notification.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.7
