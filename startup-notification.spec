@@ -2,7 +2,7 @@ Summary:	Startup Notification Library
 Summary(pl.UTF-8):	Biblioteka Startup Notification
 Name:		startup-notification
 Version:	0.12
-Release:	3
+Release:	4
 Group:		X11/Libraries
 # most of the code is on MIT license, only sn-util.c contains LGPL-licensed GLib code
 License:	LGPL v2+
