@@ -2,7 +2,7 @@ Summary:	Startup Notification Library
 Summary(pl.UTF-8):	Biblioteka Startup Notification
 Name:		startup-notification
 Version:	0.12
-Release:	4
+Release:	5
 Group:		X11/Libraries
 # most of the code is on MIT license, only sn-util.c contains LGPL-licensed GLib code
 License:	LGPL v2+
@@ -20,9 +20,9 @@ BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Startup Notification Library implements a mechanism allowing a
-desktop environment to track application startup, to provide user
-feedback and other features.
+Startup Notification Library implements a mechanism allowing a desktop
+environment to track application startup, to provide user feedback and
+other features.
 
 %description -l pl.UTF-8
 Biblioteka Startup Notification jest implementacją mechanizmu
@@ -83,13 +83,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS
-%attr(755,root,root) %{_libdir}/libstartup-notification-1.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libstartup-notification-1.so.0
+%{_libdir}/libstartup-notification-1.so.*.*.*
+%ghost %{_libdir}/libstartup-notification-1.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/startup-notification.txt
-%attr(755,root,root) %{_libdir}/libstartup-notification-1.so
+%{_libdir}/libstartup-notification-1.so
 %{_libdir}/libstartup-notification-1.la
 %{_includedir}/startup-notification-1.0
 %{_pkgconfigdir}/libstartup-notification-1.0.pc
